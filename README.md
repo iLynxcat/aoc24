@@ -6,6 +6,12 @@ Right???
 
 ---
 
+You might notice that I use Objective-C/Swift notation for function definitions
+a few places throughout the repo. I've been tinkering with Swift a lot recently
+and I've just decided I like that notation, it's succinct and descriptive.
+
+---
+
 Find me at: [[GitHub]][gh] [[Bluesky]][bsky] [[ilynxcat.me]][web]
 
 [gh]: https://github.com/ilynxcat
