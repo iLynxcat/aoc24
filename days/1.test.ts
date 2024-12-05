@@ -5,10 +5,10 @@ import {
 	findTotalDistance,
 	parseDataIntoSortedArrays,
 } from "./1";
+import { readDataFile } from "../utils/read-data";
 
 describe("Day 1", async () => {
-	const file = Bun.file(`${__dirname}/1.sample.txt`);
-	const rawText = await file.text();
+	const rawText = await readDataFile(1, "sample");
 
 	const { left, right } = parseDataIntoSortedArrays(rawText);
 	const distances = findAllDistances(left, right);
