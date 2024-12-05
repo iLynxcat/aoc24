@@ -1,6 +1,6 @@
-/*
- * PART ONE
- */
+/* Day 1: Historian Hysteria */
+/* PART ONE */
+import { whenSolving } from "../utils/when-solving";
 
 export function parseDataIntoSortedArrays(data: string): {
 	left: number[];
@@ -41,20 +41,15 @@ export function findTotalDistance(distances: number[]): number {
 	return distances.reduce((prev, curr) => prev + curr, 0);
 }
 
-if (import.meta.main) {
-	const file = Bun.file(`${import.meta.dir}/1.input.txt`);
-	const rawText = await file.text();
-
+whenSolving(1, (rawText) => {
 	const { left, right } = parseDataIntoSortedArrays(rawText);
 	const distances = findAllDistances(left, right);
 	const total = findTotalDistance(distances);
 
 	console.log(`Part 1 :: The total distance is: (solution) ${total}`);
-}
+});
 
-/*
- * PART TWO
- */
+/* PART TWO */
 export function calculateSimilarityScore(
 	left: number[],
 	right: number[]
@@ -71,12 +66,9 @@ export function calculateSimilarityScore(
 	return cumulativeScore;
 }
 
-if (import.meta.main) {
-	const file = Bun.file(`${import.meta.dir}/1.input.txt`);
-	const rawText = await file.text();
-
+whenSolving(1, (rawText) => {
 	const { left, right } = parseDataIntoSortedArrays(rawText);
 	const score = calculateSimilarityScore(left, right);
 
 	console.log(`Part 2 :: The similarity score is: (solution) ${score}`);
-}
+});
